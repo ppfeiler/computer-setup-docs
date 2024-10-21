@@ -11,6 +11,22 @@ if [ -z "${BASH_VERSION}" ] || [ -n "${ZSH_VERSION}" ]; then
   exit 1
 fi
 
-setup_echo "Hello World!"
+main() {
+  install_google_chrome
+}
 
+install_google_chrome() {
+  if command -v google-chrome 2>&1 >/dev/null
+  then
+    setup_echo "google-chrome is already installed"
+  else
+    setup_echo "Download & Install google-chrome"
+
+    curl -o /home/ppfeiler/Downloads/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+    sudo apt install ./home/ppfeiler/Downloads/google-chrome-stable_current_amd64.deb
+  fi
+}
+
+main
 } # this ensures the entire script is downloaded #
