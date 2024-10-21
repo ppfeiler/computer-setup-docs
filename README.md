@@ -24,9 +24,11 @@ wget -qO- https://raw.githubusercontent.com/ppfeiler/setup/refs/heads/main/setup
 
 Running either of the above commands downloads a script and runs it. The script clones the nvm repository to `~/.nvm`, and attempts to add the source lines from the snippet below to the correct profile file (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).
 
-
 # What will be installed?
 
 - [google-chrome][2]
+- [Yakuake][3]
 
 [1]: https://github.com/ppfeiler/setup/blob/main/setup.sh
+[2]: https://www.google.com/chrome/
+[3]: https://apps.kde.org/de/yakuake/

@@ -2,6 +2,8 @@
 
 { # this ensures the entire script is downloaded #
 
+readonly DOWNLOADS_DIR="$HOME/Downloads"
+
 setup_echo() {
   command printf %s\\n "$*" 2>/dev/null
 }
@@ -13,6 +15,8 @@ fi
 
 main() {
   install_google_chrome
+  install_apts
+  install_snaps
 }
 
 install_google_chrome() {
@@ -22,10 +26,20 @@ install_google_chrome() {
   else
     setup_echo "Download & Install google-chrome"
 
-    curl -o /home/ppfeiler/Downloads/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    curl -o "$DOWNLOADS_DIR"/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-    sudo apt install ./home/ppfeiler/Downloads/google-chrome-stable_current_amd64.deb
+    sudo apt install "$DOWNLOADS_DIR"/google-chrome-stable_current_amd64.deb
   fi
+}
+
+install_apts() {
+  setup_echo "Install yakuake"
+  sudo apt install -y "yakuake"
+}
+
+install_snaps() {
+  sudo snap install outlook-for-linux --edge
+  sudo snap install teams-for-linux
 }
 
 main
