@@ -1,34 +1,67 @@
-# Setup script for setting up new computers
+# My Guide to Setting Up a New Computer
 
-## About
+<img src="assets/logo.webp" alt="Repository Logo" width="300" />
 
-This is my selfwritten script for setting up new computers.
+This repository documents the steps I take when setting up a new computer.
 
-The goal is to simply execute this script, answer a few questions and then verything needed will be installed/configured.
+My goal is to record every step and installation process to ensure I can consistently recreate the same environment whenever I set up a new machine.
 
-## Setup a new computer
+This guide assumes the use of an Ubuntu-based distribution with KDE as the desktop environment.
 
-Before you run the setup script, make sure that your system is up-to-date:
-```sh
-sudo apt update
-sudo apt upgrade
+## Commands
+```bash
+# apts
+sudo apt install \
+    libfuse2 \
+    yakuake \
+    git \
+    net-tools
+
+# local debs
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb
+wget https://downloads.1password.com/linux/debian/amd64/stable/1password-latest.deb
+
+sudo apt install \
+    ./google-chrome-stable_current_amd64.deb \
+    ./onlyoffice-desktopeditors_amd64.deb \
+    ./1password-latest.deb
+
+# snaps
+sudo snap install \
+    outlook-for-linux --edge
+    
+sudo snap install \
+    code --classic
+    
+# flatpaks
+flatpak install flathub \
+    com.github.IsmaelMartinez.teams_for_linux \
+    com.spotify.Client \
+    com.slack.Slack
+
+# Jetbrains Toolbox
+curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
+
+# Sdkman
+curl -s "https://get.sdkman.io" | bash
 ```
 
-To setup a new computer, you should run the [install script][1]. To do that, you may either download and run the script manually, or use the following cURL or Wget command:
-```sh
-curl -o- https://raw.githubusercontent.com/ppfeiler/setup/refs/heads/main/setup.sh | bash
-```
-```sh
-wget -qO- https://raw.githubusercontent.com/ppfeiler/setup/refs/heads/main/setup.sh | bash
-```
+## Manual Installation
 
-Running either of the above commands downloads a script and runs it. The script clones the nvm repository to `~/.nvm`, and attempts to add the source lines from the snippet below to the correct profile file (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).
+- [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md)
 
-# What will be installed?
+## After the installation
 
-- [google-chrome][2]
-- [Yakuake][3]
+- Autostart yakuake
+  - Set Keyboard Shortcut to `STRG + ALT + T`
+- Install Intellij Idea with the toolbox app
+- [Choose an wallpaper](https://penger.city/wallpapers/)
+- Connect 1Password and aktivate the .ssh agent
 
-[1]: https://github.com/ppfeiler/setup/blob/main/setup.sh
-[2]: https://www.google.com/chrome/
-[3]: https://apps.kde.org/de/yakuake/
+## Todo
+
+- find an automatic way for nvm
+- get rid of snap
+- maybe provide a repository for my favorite wallpapers?
+- add dotfiles
