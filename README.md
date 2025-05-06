@@ -45,6 +45,9 @@ curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install
 
 # Sdkman
 curl -s "https://get.sdkman.io" | bash
+
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ## Manual Installation
