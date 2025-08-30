@@ -36,7 +36,8 @@ sudo snap install notion-desktop
 flatpak install flathub \
     com.github.IsmaelMartinez.teams_for_linux \
     com.spotify.Client \
-    com.slack.Slack
+    com.slack.Slack \
+    org.remmina.Remmina
 
 # Jetbrains Toolbox
 curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
