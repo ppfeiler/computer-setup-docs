@@ -30,7 +30,9 @@ sudo apt install \
 sudo snap install \
     outlook-for-linux --edge
 
-sudo snap install notion-desktop
+sudo snap install \
+    notion-desktop
+    just
     
 # flatpaks
 flatpak install flathub \
