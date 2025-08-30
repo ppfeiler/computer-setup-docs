@@ -55,7 +55,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ## After the installation
 
-- download yadm
+- [download yadm and configure it](https://github.com/ppfeiler/yadm)
 - Configure yakuake
   - Add to autostart
   - Set Keyboard Shortcut to `STRG + ALT + T`
