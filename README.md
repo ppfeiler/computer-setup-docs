@@ -49,6 +49,9 @@ curl -s "https://get.sdkman.io" | bash
 
 # uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# uv tools
+uv tool install rust-just
 ```
 
 ## Manual Installation
