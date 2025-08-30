@@ -42,7 +42,7 @@ flatpak install flathub \
     org.remmina.Remmina
 
 # Jetbrains Toolbox
-curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
+curl -fsSL https://raw.githubusercontent.com/TerrorSquad/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
 
 # Sdkman
 curl -s "https://get.sdkman.io" | bash
