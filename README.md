@@ -12,10 +12,9 @@ This guide assumes the use of an Ubuntu-based distribution with KDE as the deskt
 ```bash
 # apts
 sudo apt install \
-    libfuse2 \
     yakuake \
     git \
-    net-tools
+    yadm
 
 # local debs
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -55,15 +54,11 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ## After the installation
 
-- Autostart yakuake
+- download yadm
+- Configure yakuake
+  - Add to autostart
   - Set Keyboard Shortcut to `STRG + ALT + T`
-- Install Intellij Idea with the toolbox app
-- [Choose an wallpaper](https://penger.city/wallpapers/)
+- Install Intellij Idea and PyCharm with the toolbox app
+- Choose an wallpaper
+  - [Penger?](https://penger.city/wallpapers/)
 - Connect 1Password and aktivate the .ssh agent
-
-## Todo
-
-- find an automatic way for nvm
-- get rid of snap
-- maybe provide a repository for my favorite wallpapers?
-- add dotfiles
