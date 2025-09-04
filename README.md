@@ -10,6 +10,9 @@ This guide assumes the use of an Ubuntu-based distribution with KDE as the deskt
 
 ## Commands
 ```bash
+# remove pre-installed
+sudo apt remove --purge libreoffice*
+
 # apts
 sudo apt install \
     yakuake \
@@ -52,6 +55,10 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # uv tools
 uv tool install rust-just
+
+# docker
+curl -fsSL https://get.docker.com | sh
+dockerd-rootless-setuptool.sh install
 ```
 
 ## Manual Installation
