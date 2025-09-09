@@ -42,7 +42,8 @@ flatpak install flathub \
     com.github.IsmaelMartinez.teams_for_linux \
     com.spotify.Client \
     com.slack.Slack \
-    org.remmina.Remmina
+    org.remmina.Remmina \
+    io.dbeaver.DBeaverCommunity
 
 # Jetbrains Toolbox
 curl -fsSL https://raw.githubusercontent.com/TerrorSquad/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
